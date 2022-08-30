@@ -1,0 +1,21 @@
+int LED = 4;
+int button1 = 2; 
+int button2 = 3;  
+int buttonStatus1 = 0; 
+int buttonStatus2 = 0; 
+void setup()
+{
+pinMode(LED, OUTPUT);
+pinMode(button1, INPUT);
+pinMode(button2, INPUT);
+}
+
+void loop()
+{
+buttonStatus1 = digitalRead(button1);
+buttonStatus2 = digitalRead(button2);
+  if (buttonStatus1 == HIGH && buttonStatus2 == HIGH){
+	digitalWrite(LED, HIGH);
+  }
+  else digitalWrite(LED, LOW);
+}
